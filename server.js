@@ -3,8 +3,8 @@
 var express = require("express");
 var path = require("path"); 
 var fs = require("fs");
-var data = require("./db/db.json")
-var notes = []
+var data = require("./db/db.json");
+var notes = [];
 
 // Sets up the Express App
 // =============================================================
@@ -34,7 +34,7 @@ app.get("/", function(req, res) {
   app.post("/api/notes", function(req, res) {
     var newNotes = req.body;
     data.push(newNotes);
-    console.log(newNotes);
+    console.log(newNotes)};
 
 // Starts the server to begin listening
 // =============================================================
