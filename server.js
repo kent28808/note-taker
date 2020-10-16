@@ -19,11 +19,11 @@ app.use(express.json());
 //GET
 //index.html
 app.get("/"), function(req, res) {
-    res.sendFile(path.join(__dirname, ".HW/note-taker/public/index.html"));
+    res.sendFile(path.join(__dirname, "..note-taker/public/index.html"));
   };
   //notes.html
   app.get("/notes"), function(req, res) {
-    res.sendFile(path.join(__dirname, "HW/note-taker/public/notes.html"));
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
   };
   //api notes
   app.get("/api/notes"), function(req, res) {
