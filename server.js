@@ -18,23 +18,24 @@ app.use(express.json());
 // Basic routes
 //GET
 //index.html
-app.get("/", function(req, res) {
+app.get("/"), function(req, res) {
     res.sendFile(path.join(__dirname, "./public/index.html"));
-  });
+  };
   //notes.html
-  app.get("/notes", function(req, res) {
+  app.get("/notes"), function(req, res) {
     res.sendFile(path.join(__dirname, "./public/notes.html"));
-  });
+  };
   //api notes
-  app.get("/api/notes", function(req, res) {
+  app.get("/api/notes"), function(req, res) {
     return res.json(data);
-  });
+  };
   
   //POST
-  app.post("/api/notes", function(req, res) {
+  app.post("/api/notes"), function(req, res) {
     var newNotes = req.body;
     data.push(newNotes);
-    console.log(newNotes)};
+    console.log(newNotes)
+  };
 
 // Starts the server to begin listening
 // =============================================================
