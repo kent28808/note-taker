@@ -48,7 +48,7 @@ User opens heroku link and is taken to a homepage of the Note Taker Applicaion. 
 ## Contributions
 
 This project was written by: Ken Tanoue.
-- [Link to Portfolio Site](https://kent28808.github.io/Responsive-Portfolio/portfolio html)
+- [Link to Portfolio Site](https://kent28808.github.io/Responsive-Portfolio/portfolio.html)
 - [Link to Github](https://github.com/kent28808/)
 
    
