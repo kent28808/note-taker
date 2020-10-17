@@ -26,18 +26,7 @@ app.use(htmlRoutes);
 // app.get("/notes"), function (req, res) {
 //   res.sendFile(path.join(__dirname, "./public/notes.html"));
 // };
-// //api notes
-// app.get("/api/notes"), function (req, res) {
-//   return res.json(data);
-// };
 
-// //POST
-// app.post("/api/notes"), function (req, res) {
-//   var newNotes = req.body;
-//   data.push(newNotes);
-//   console.log(newNotes)
-// };
-// //index.html
 // app.get("*"), function (req, res) {
 //   res.sendFile(path.join(__dirname, "./public/index.html"));
 // };
