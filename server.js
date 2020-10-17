@@ -1,10 +1,11 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var path = require("path"); 
+var path = require("path");
 var fs = require("fs");
 var data = require("./db/db.json");
 var notes = [];
+var htmlRoutes = require("./routes/index")
 
 // Sets up the Express App
 // =============================================================
@@ -14,31 +15,35 @@ var PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
+app.use(htmlRoutes);
 
 // Basic routes
 //GET
-//index.html
-app.get("/"), function(req, res) {
-    res.sendFile(path.join(__dirname, "..note-taker/public/index.html"));
-  };
-  //notes.html
-  app.get("/notes"), function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/notes.html"));
-  };
-  //api notes
-  app.get("/api/notes"), function(req, res) {
-    return res.json(data);
-  };
-  
-  //POST
-  app.post("/api/notes"), function(req, res) {
-    var newNotes = req.body;
-    data.push(newNotes);
-    console.log(newNotes)
-  };
 
+
+// //notes.html
+// app.get("/notes"), function (req, res) {
+//   res.sendFile(path.join(__dirname, "./public/notes.html"));
+// };
+// //api notes
+// app.get("/api/notes"), function (req, res) {
+//   return res.json(data);
+// };
+
+// //POST
+// app.post("/api/notes"), function (req, res) {
+//   var newNotes = req.body;
+//   data.push(newNotes);
+//   console.log(newNotes)
+// };
+// //index.html
+// app.get("*"), function (req, res) {
+//   res.sendFile(path.join(__dirname, "./public/index.html"));
+// };
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
+  console.log("Visit at http://localhost:" + PORT);
+});
