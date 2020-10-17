@@ -22,9 +22,12 @@ router.post("/api/notes", function (req, res) {
 
 //DELETE
 router.delete(("/api/notes/:id"), function (req, res) {
- const newdata = data.filter(item=> item.id != req.params.id)
- console.log(newdata)
- return res.json(newdata)
+ for (var i = 0; i < data.length; i++){
+   if (data[i].id == req.params.id){
+     data.splice(i,1);
+   }
+ }
+ return res.json(data)
 })
 
 //notes.html
