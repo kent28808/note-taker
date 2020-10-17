@@ -5,7 +5,7 @@
 
 This is a simple note taker application which is used to write, save and delete notes.  This app has been deployed using Heroku. 
 
-![Note Taker](HW/note-taker/Photo.png)
+![Note Taker](https://github.com/kent28808/note-taker/blob/main/Photo.png)
 
 ![Note Taker](HW/note-taker/noteTaker.gif)
 
