@@ -23,8 +23,8 @@ router.post("/api/notes", function (req, res) {
 //DELETE
 router.delete(("/api/notes/:id"), function (req, res) {
  const newdata = data.filter(item=> item.id != req.params.id)
- return res.json(newdata)
  console.log(newdata)
+ return res.json(newdata)
 })
 
 //notes.html
