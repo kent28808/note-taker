@@ -7,7 +7,7 @@ This is a simple note taker application which is used to write, save and delete 
 
 ![Note Taker](https://github.com/kent28808/note-taker/blob/main/Photo.png)
 
-![Note Taker](HW/note-taker/noteTaker.gif)
+![Note Taker](https://github.com/kent28808/note-taker/blob/main/noteTaker.gif)
 
 
 ## Built With
